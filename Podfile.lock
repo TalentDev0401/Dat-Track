@@ -1,0 +1,46 @@
+PODS:
+  - AFNetworking (1.3.4)
+  - Alamofire (4.9.1)
+  - AudioIndicatorBars (0.0.2)
+  - CDAlertView (0.10.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - RSLoadingView (1.1.3)
+  - SwiftTryCatch (0.0.1)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - AFNetworking (= 1.3.4)
+  - Alamofire
+  - AudioIndicatorBars (~> 0.0.2)
+  - CDAlertView
+  - NVActivityIndicatorView
+  - RSLoadingView
+  - SwiftTryCatch
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Alamofire
+    - AudioIndicatorBars
+    - CDAlertView
+    - NVActivityIndicatorView
+    - RSLoadingView
+    - SwiftTryCatch
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AudioIndicatorBars: 10bf47c8422578dab5046e795a85a0f9b292d57d
+  CDAlertView: ee6a87c90c4283c8d316d55633db1a6981f1cc51
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  RSLoadingView: c7749afdd455229643e8f34277d0695973a15b1a
+  SwiftTryCatch: fb6d2b34abe48efd69578dac919293a44f95b481
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 64860c753f7fe1423b7d1aad8ac98214fe5ff3a2
+
+COCOAPODS: 1.8.4

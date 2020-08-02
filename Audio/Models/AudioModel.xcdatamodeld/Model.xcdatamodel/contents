@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A603" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Album" representedClassName="Album" syncable="YES" codeGenerationType="class">
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="created_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="explicit_lyrics" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="genre" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image_album75x75" optional="YES" attributeType="String"/>
+        <attribute name="image_album150x150" optional="YES" attributeType="String"/>
+        <attribute name="image_album200x200" optional="YES" attributeType="String"/>
+        <attribute name="image_album400x400" optional="YES" attributeType="String"/>
+        <attribute name="image_album800x800" optional="YES" attributeType="String"/>
+        <attribute name="label" optional="YES" attributeType="String"/>
+        <attribute name="number_of_tracks" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="release_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="source_identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updated_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="artist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Artist" inverseName="album" inverseEntity="Artist"/>
+        <relationship name="track" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Track" inverseName="album" inverseEntity="Track"/>
+    </entity>
+    <entity name="Artist" representedClassName="Artist" syncable="YES" codeGenerationType="class">
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="created_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image_artist180x80" optional="YES" attributeType="String"/>
+        <attribute name="image_artist190x230" optional="YES" attributeType="String"/>
+        <attribute name="image_artist200x" optional="YES" attributeType="String"/>
+        <attribute name="image_artist375x250" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="source_identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updated_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="album" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Album" inverseName="artist" inverseEntity="Album"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Track" inverseName="artist" inverseEntity="Track"/>
+    </entity>
+    <entity name="Match" representedClassName="Match" syncable="YES" codeGenerationType="class">
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="created_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duplicate" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="match_certainty" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updated_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="juked_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="matches" inverseEntity="User"/>
+        <relationship name="track" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Track" inverseName="matches" inverseEntity="Track"/>
+    </entity>
+    <entity name="Track" representedClassName="Track" syncable="YES" codeGenerationType="class">
+        <attribute name="bitrate" optional="YES" attributeType="String"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="created_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="disc_number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dislikes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="explicit_lyrics" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="genre" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="itunes_buy_url" optional="YES" attributeType="String"/>
+        <attribute name="itunes_preview_url" optional="YES" attributeType="String"/>
+        <attribute name="likes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="listens" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mp3_rights_album_purchase_only" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mp3_rights_can_purchase_download" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mp3_rights_can_sample_stream" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="ninety_second_preview_url" optional="YES" attributeType="String"/>
+        <attribute name="popularity_ranking" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="release_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sample_locations_mp3" optional="YES" attributeType="String"/>
+        <attribute name="sample_locations_rtmp" optional="YES" attributeType="String"/>
+        <attribute name="source_identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="track_number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updated_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="youtube_url" optional="YES" attributeType="String"/>
+        <relationship name="album" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="track" inverseEntity="Album"/>
+        <relationship name="artist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Artist" inverseName="tracks" inverseEntity="Artist"/>
+        <relationship name="matches" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Match" inverseName="track" inverseEntity="Match"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="udid" optional="YES" attributeType="String"/>
+        <relationship name="matches" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Match" inverseName="juked_user" inverseEntity="Match"/>
+        <relationship name="userdetail" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="UserDetail" inverseName="user" inverseEntity="UserDetail"/>
+    </entity>
+    <entity name="UserDetail" representedClassName="UserDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="access_token" optional="YES" attributeType="String"/>
+        <attribute name="birth_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="created_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="facebook_id" optional="YES" attributeType="String"/>
+        <attribute name="first_name" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="last_login_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="last_name" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="longitude" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="sex" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updated_on" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="year_born" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userdetail" inverseEntity="User"/>
+    </entity>
+    <elements>
+        <element name="Album" positionX="-27" positionY="153" width="128" height="343"/>
+        <element name="Artist" positionX="-45" positionY="144" width="128" height="238"/>
+        <element name="Match" positionX="-63" positionY="45" width="128" height="178"/>
+        <element name="Track" positionX="-54" positionY="135" width="128" height="493"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="UserDetail" positionX="-54" positionY="72" width="128" height="298"/>
+    </elements>
+</model>

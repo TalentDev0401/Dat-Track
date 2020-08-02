@@ -1,0 +1,9 @@
+${PODS_ROOT}/Target Support Files/Pods-Audio/Pods-Audio-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AudioIndicatorBars/AudioIndicatorBars.framework
+${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework
+${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/RSLoadingView/RSLoadingView.framework
+${BUILT_PRODUCTS_DIR}/SwiftTryCatch/SwiftTryCatch.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
